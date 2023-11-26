@@ -102,6 +102,7 @@ public class Vuelo{
         String codigoConfirmacion = this.id + "-" + this.aumentarContadorReservas();
         Reserva reserva = new Reserva(nombre, apellido, cantidadAsientos, codigoConfirmacion);
         this.reservas.add(reserva);
+        this.asientosDisponibles -= cantidadAsientos;
         return codigoConfirmacion;
     }
 }
